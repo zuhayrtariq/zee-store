@@ -15,6 +15,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import UserProfileDropdown from "./UserProfileDropdown";
+import NavIcons from "./NavIcons";
 
 const Header = () => {
   const navItems = [
@@ -41,10 +43,10 @@ const Header = () => {
   ];
   return (
     <>
-      <div className="py-4  items-center justify-between hidden md:flex">
+      <div className="py-4 lg:px-16 md:px-8 h-[80px]  items-center justify-between hidden md:flex">
         <div className="flex items-center gap-8 ">
           {/* Logo */}
-          <h1 className="text-xl font-bold tracking-tighter">Zee Store</h1>
+          <h1 className="text-2xl font-bold tracking-tighter">Zee Store</h1>
 
           {/* Nav Items */}
           <div>
@@ -63,14 +65,7 @@ const Header = () => {
         <div className="flex items-center gap-x-4">
           {/* Searchbar */}
           <Searchbar />
-          <div className="flex items-center gap-x-2 text-xs">
-            <p>
-              <UserCircle2 className="w-4 h-4 cursor-pointer" />
-            </p>
-            <p>
-              <ShoppingCartIcon className="w-4 h-4 cursor-pointer" />
-            </p>
-          </div>
+          <NavIcons />
         </div>
       </div>
       <div className="md:hidden flex justify-between px-4 py-2">
@@ -98,15 +93,7 @@ const Header = () => {
           </SheetContent>
         </Sheet>
         <h1 className="text-xl font-bold tracking-tighter">Zee Store</h1>
-
-        <div className="flex items-center gap-x-2 text-xs">
-          <p>
-            <UserCircle2 className="w-4 h-4 cursor-pointer" />
-          </p>
-          <p>
-            <ShoppingCartIcon className="w-4 h-4 cursor-pointer" />
-          </p>
-        </div>
+        <NavIcons />
       </div>
     </>
   );

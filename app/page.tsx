@@ -2,13 +2,15 @@ import Image from "next/image";
 import Header from "./components/Header";
 import ProductsGrid from "./components/ProductsGrid";
 import { CoverDemo } from "./components/Cover";
+import { Slider } from "./components/Slider";
 
 export default function Home() {
   return (
-    <div className="lg:px-16 md:px-8">
-      <Header />
+    <>
+      {/* <Header /> */}
+      <Slider />
       {/* <CoverDemo /> */}
       {/* <ProductsGrid /> */}
-    </div>
+    </>
   );
 }
