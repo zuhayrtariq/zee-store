@@ -54,7 +54,7 @@ const Header = () => {
               <Link
                 key={navItem.title}
                 href={navItem.path}
-                className="hover:font-semibold px-2 transition-all duration-100 letter- hover:tracking-[0px] tracking-[1px]	"
+                className=" px-2 hover:text-black text-gray-800	"
               >
                 {navItem.title}
               </Link>
@@ -68,7 +68,7 @@ const Header = () => {
           <NavIcons />
         </div>
       </div>
-      <div className="md:hidden flex justify-between px-4 py-2">
+      <div className="md:hidden flex h-[80px] items-center justify-between px-4 ">
         {/* Logo */}
 
         <Sheet>
@@ -77,7 +77,7 @@ const Header = () => {
           </SheetTrigger>
           <SheetContent side={"left"}>
             <SheetHeader className="">
-              <SheetTitle className="text-2xl">Zee Store</SheetTitle>
+              <SheetTitle className="text-3xl">Zee Store</SheetTitle>
             </SheetHeader>
             <div className=" h-full mt-8">
               {navItems.map((navItem) => (
