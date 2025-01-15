@@ -15,7 +15,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import UserProfileDropdown from "./UserProfileDropdown";
 import NavIcons from "./NavIcons";
 
 const Header = () => {
@@ -43,7 +42,7 @@ const Header = () => {
   ];
   return (
     <>
-      <div className="py-4 lg:px-16 md:px-8 h-[80px]  items-center justify-between hidden md:flex">
+      <div className="container-p h-[80px]  items-center justify-between hidden md:flex">
         <div className="flex items-center gap-8 ">
           {/* Logo */}
           <h1 className="text-2xl font-bold tracking-tighter">Zee Store</h1>

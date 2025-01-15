@@ -9,7 +9,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="flex items-center py-2 bg-secondary justify-between lg:px-16 md:px-8 mt-4">
+    <div className="container-p flex items-center py-2 bg-secondary justify-between">
       <div className="flex gap-4 items-center  text-gray-700">
         <Link href={"/"}>
           <GithubIcon className="w-6 h-6 hover:text-black" />

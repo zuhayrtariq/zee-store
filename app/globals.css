@@ -70,3 +70,7 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.container-p {
+  @apply px-4 md:px-8 lg:px-16;
+}

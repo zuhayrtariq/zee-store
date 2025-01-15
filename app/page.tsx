@@ -9,8 +9,7 @@ export default function Home() {
   return (
     <div>
       <Slider />
-      <div className="lg:px-16 md:px-8 px-4">
-        {/* <CoverDemo /> */}
+      <div className="container-p ">
         <div className="mt-20">
           <h1 className="text-2xl cursor-default">Featured Products</h1>
           <ProductsGrid />
