@@ -1,11 +1,22 @@
+"use client";
 import Image from "next/image";
 import Header from "./components/Header";
 import ProductsGrid from "./components/ProductsGrid";
-import { CoverDemo } from "./components/Cover";
 import { Slider } from "./components/Slider";
 import CategoriesCarousel from "./components/CategoriesCarousel";
+import { useEffect } from "react";
+import { useWixClient } from "@/hooks/useWixClient";
 
 export default function Home() {
+  const wixClient = useWixClient();
+
+  useEffect(() => {
+    const getProducts = async () => {
+      const res = await wixClient.products.queryProducts().find();
+      console.log(res);
+    };
+    getProducts();
+  }, [wixClient]);
   return (
     <div>
       <Slider />
