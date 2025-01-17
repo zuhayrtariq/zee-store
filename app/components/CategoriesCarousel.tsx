@@ -9,9 +9,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 import React from "react";
+import wixClientServer from "@/lib/wixClientServer";
 
-const CategoriesCarousel = () => {
-  const categories = [
+const CategoriesCarousel = async () => {
+  const wixClient = await wixClientServer();
+  const { items } = await wixClient.collections.queryCollections().find();
+  console.log(items);
+  const categories1 = [
     {
       name: "Shirts",
       imgUrl:
@@ -64,15 +68,15 @@ const CategoriesCarousel = () => {
         }}
       >
         <CarouselContent className="">
-          {categories.map((category) => (
+          {items.map((category) => (
             <CarouselItem
               className="basis-1/2 lg:basis-1/4 "
               key={category.name}
             >
-              <Link href={"/"} className="group ">
+              <Link href={"/list?cat=" + category.slug} className="group ">
                 <div className="h-60 relative">
                   <Image
-                    src={category.imgUrl}
+                    src={category.media?.mainMedia?.image?.url || ""}
                     alt="P"
                     fill
                     sizes={"100vw"}
