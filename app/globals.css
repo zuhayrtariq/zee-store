@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+:root {
+  --font-cg: "Cormorant Garamond", serif;
+  --font-montserrat: "Montserrat", sans-serif;
 }
 
 @layer base {
@@ -73,4 +77,12 @@ body {
 
 .container-p {
   @apply px-4 md:px-8 lg:px-16;
+}
+
+.font-cg {
+  font-family: var(--font-cg);
+}
+
+h1 {
+  font-family: var(--font-montserrat);
 }

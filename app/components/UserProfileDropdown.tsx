@@ -13,7 +13,7 @@ const UserProfileDropdown = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="outline-none">
-        <UserCircle2 className="w-4 h-4 cursor-pointer" />
+        <UserCircle2 className="w-6 h-6 cursor-pointer" />
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuLabel>My Account</DropdownMenuLabel>

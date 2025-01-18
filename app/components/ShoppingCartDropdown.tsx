@@ -15,8 +15,8 @@ const ShoppingCartDropdown = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="relative outline-none">
-        <ShoppingCartIcon className="w-4 h-4 cursor-pointer " />
-        <span className="absolute bottom-2 h-4 w-4 left-1.5 bg-red-500 text-white opacity-90  text-xs rounded-full flex justify-center items-center">
+        <ShoppingCartIcon className="w-6 h-6 cursor-pointer " />
+        <span className="absolute bottom-2.5 h-6 w-6 left-3 bg-red-500 text-white  text-xs rounded-full flex justify-center items-center">
           9+
         </span>
       </DropdownMenuTrigger>

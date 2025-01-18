@@ -9,19 +9,6 @@ import { useWixClient } from "@/hooks/useWixClient";
 import wixClientServer from "@/lib/wixClientServer";
 
 export default async function Home() {
-  // const wixClient = useWixClient();
-
-  // useEffect(() => {
-  //   const getProducts = async () => {
-  //     const res = await wixClient.products.queryProducts().find();
-  //     console.log(res);
-  //   };
-  //   getProducts();
-  // }, [wixClient]);
-
-  // const wixClient = await wixClientServer();
-  // const res = await wixClient.products.queryProducts().find();
-  // console.log(res);
   return (
     <div>
       <Slider />
