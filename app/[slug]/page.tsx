@@ -15,7 +15,6 @@ const SinglePage = async ({
     .queryProducts()
     .eq("slug", slug)
     .find();
-  console.log(items);
   if (!items[0]) {
     return notFound();
   }
