@@ -4,8 +4,20 @@ import ProductsGrid from "./components/ProductsGrid";
 // import { CoverDemo } from "./components/Cover";
 import { Slider } from "./components/Slider";
 import CategoriesCarousel from "./components/CategoriesCarousel";
+import useProducts from "@/hooks";
 
 export default function Home() {
+  const { products, loading, error } = useProducts(
+    "https://api.example.com/products"
+  );
+  if (loading) {
+    return <div>Loading products...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+  console.log(products);
   return (
     <div>
       <Slider />
