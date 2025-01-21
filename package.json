@@ -17,6 +17,7 @@
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.7.1",
     "@wix/bookings": "^1.0.545",
+    "@wix/ecom": "^1.0.899",
     "@wix/sdk": "^1.15.8",
     "@wix/stores": "^1.0.345",
     "class-variance-authority": "^0.7.1",

@@ -1,20 +1,27 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 import wixClientServer from "@/lib/wixClientServer";
-
+import Pagination from "./Pagination";
+const PRODUCTS_PER_PAGE = 8;
 const ProductsLayout = async ({ searchParams }: { searchParams: any }) => {
   const wixClient = await wixClientServer();
   const params = await searchParams;
   console.log(params);
+  const cat = await wixClient.collections.getCollectionBySlug(
+    params.cat || "all-products"
+  );
   //   console.log(params.hasOwnProperty("Colors"));
 
   //   let productsData;
 
   let data = await wixClient.products
     .queryProducts()
+    .eq("collectionIds", cat.collection?._id)
     .startsWith("name", params?.name || "")
     .gt("priceData.price", params?.min || 0)
-    .lt("priceData.price", params?.max || 999999);
+    .lt("priceData.price", params?.max || 999999)
+    .limit(PRODUCTS_PER_PAGE)
+    .skip(params.page ? parseInt(params.page) * PRODUCTS_PER_PAGE : 0);
 
   //   data;
   if (params?.Sort) {
@@ -29,8 +36,9 @@ const ProductsLayout = async ({ searchParams }: { searchParams: any }) => {
       data = data.descending(sortBy);
     }
   }
-  const { items } = await data.find();
-  //   productsData = productsData.items;
+  const { items, currentPage } = await data.find();
+  const d = await data.find();
+
   const productsData = items.filter((product) => {
     const opts = product.productOptions;
 
@@ -46,11 +54,19 @@ const ProductsLayout = async ({ searchParams }: { searchParams: any }) => {
   });
 
   return (
-    <div className="grid lg:grid-cols-4 gap-x-8 gap-y-16 justify-between grid-cols-2 overflow-hidden items-center ">
-      {productsData.map((product) => (
-        <ProductCard product={product} key={product._id} />
-      ))}
-    </div>
+    <>
+      <div className="grid lg:grid-cols-4 gap-x-8 gap-y-16 justify-between grid-cols-2 overflow-hidden items-center ">
+        {productsData.map((product) => (
+          <ProductCard product={product} key={product._id} />
+        ))}
+      </div>
+
+      <Pagination
+        currentPage={currentPage || 0}
+        hasPrev={d.hasPrev()}
+        hasNext={d.hasNext()}
+      />
+    </>
   );
 };
 

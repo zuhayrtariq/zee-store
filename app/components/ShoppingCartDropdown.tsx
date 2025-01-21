@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,8 +12,12 @@ import {
 import { ShoppingCartIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { useWixClient } from "@/hooks/useWixClient";
 
-const ShoppingCartDropdown = () => {
+const ShoppingCartDropdown = async () => {
+  const cartItems = true;
+  const wixClient = useWixClient();
+  const res = await wixClient.currentCart.getCurrentCart();
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="relative outline-none">
