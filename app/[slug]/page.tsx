@@ -20,7 +20,7 @@ const SinglePage = async ({
   }
   const product = items[0];
   return (
-    <div className="flex w-full container-p gap-x-8">
+    <div className="flex w-full container-p gap-x-8 my-8">
       <div className="w-full lg:w-1/2  flex">
         <ProductImages items={product.media?.items} />
       </div>
