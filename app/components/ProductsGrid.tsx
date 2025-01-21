@@ -18,7 +18,7 @@ const ProductsGrid = async ({
       .descending("lastUpdated")
       .limit(limit)
       .find();
-  } else if ((categoryId = "0")) {
+  } else if (categoryId == "0") {
     productsData = await wixClient.products.queryProducts().find();
   } else
     productsData = await wixClient.products

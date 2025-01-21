@@ -31,7 +31,7 @@ const CategoriesCarousel = async () => {
               className="basis-1/2 lg:basis-1/4 "
               key={category.name}
             >
-              <Link href={"/list?cat=" + category.slug} className="group ">
+              <Link href={"/shop?cat=" + category.slug} className="group ">
                 <div className="h-60 relative">
                   <Image
                     src={category.media?.mainMedia?.image?.url || ""}

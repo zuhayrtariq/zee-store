@@ -29,13 +29,32 @@ const ProductCard = ({ product }: { product: any }) => {
       </Link>
 
       <div className="mt-2">
-        <div className="flex w-full justify-between items-center">
-          <p className="font-bold text-sm capitalize">{product.name}</p>
-          <p className="font-bold text-sm">${product.price.price}</p>
+        <div className="flex flex-col gap-2 w-full justify-between text-sm mb-2">
+          <p className="font-semibold text-sm capitalize flex-1">
+            {product.name}
+            <br />
+            <span className="text-xs text-gray-500 ">
+              Lorem ipsum dolor sit amet consectetur
+            </span>
+          </p>
+
+          <p className="font-semibold text-xs ">
+            {product.price.price !== product.price.discountedPrice ? (
+              <>
+                <span className="line-through text-gray-600 pr-2">
+                  {product.price.currency}{" "}
+                  {product.price.price.toLocaleString()}
+                </span>
+                {product.price.currency}{" "}
+                {product.price.discountedPrice.toLocaleString()}
+              </>
+            ) : (
+              product.price.currency +
+              " " +
+              product.price.price.toLocaleString()
+            )}
+          </p>
         </div>
-        <p className="text-xs text-gray-500 pb-2">
-          Lorem ipsum dolor sit amet consectetur
-        </p>
         <Button
           variant={"outline"}
           size={"sm"}
