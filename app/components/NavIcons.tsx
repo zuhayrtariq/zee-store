@@ -1,11 +1,11 @@
-import React from "react";
 import UserProfileDropdown from "./UserProfileDropdown";
 import ShoppingCartDropdown from "./ShoppingCartDropdown";
-
-const NavIcons = () => {
+import { getUser } from "@/hooks/getUser";
+const NavIcons = async () => {
+  const user = await getUser();
   return (
     <div className="flex items-center gap-x-2 text-xs">
-      <UserProfileDropdown />
+      <UserProfileDropdown user={"a"} />
 
       <ShoppingCartDropdown />
     </div>

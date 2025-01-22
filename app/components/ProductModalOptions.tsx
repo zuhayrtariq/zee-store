@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
-const CustomizeProducts = ({
+const ProductModalOptions = ({
   productId,
   variants,
   productOptions,
@@ -133,7 +133,7 @@ const CustomizeProducts = ({
         </div>
       ))}
 
-      <div className="">
+      {/* <div className="">
         <h4 className="font-semibold pb-2 text-xl">
           Choose a Quantity {quantity}
         </h4>
@@ -164,9 +164,9 @@ const CustomizeProducts = ({
             Add To Cart
           </Button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
 
-export default CustomizeProducts;
+export default ProductModalOptions;

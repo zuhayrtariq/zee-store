@@ -3,6 +3,7 @@ import ProductImages from "../components/ProductImages";
 import CustomizeProducts from "../components/CustomizeProducts";
 import wixClientServer from "@/lib/wixClientServer";
 import { notFound } from "next/navigation";
+import { currentCart } from "@wix/ecom";
 
 const SinglePage = async ({
   params,
@@ -19,6 +20,7 @@ const SinglePage = async ({
     return notFound();
   }
   const product = items[0];
+
   return (
     <div className="flex w-full container-p gap-x-8 my-8">
       <div className="w-full lg:w-1/2  flex">

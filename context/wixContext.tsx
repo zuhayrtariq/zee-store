@@ -7,6 +7,7 @@ import Cookies from "js-cookie";
 import { ReactNode } from "react";
 import { createContext } from "react";
 const refreshToken = JSON.parse(Cookies.get("refreshToken") || "{}");
+const accessToken = JSON.parse(Cookies.get("accessToken") || "{}");
 
 const myWixClient = createClient({
   modules: {

@@ -3,12 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 import React from "react";
+import { ProductModal } from "./ProductModal";
 
 const ProductCard = ({ product }: { product: any }) => {
   return (
     <div>
       <Link href={"/" + product.slug}>
-        <div className="relative h-80 w-full">
+        <div className="relative h-60  lg:h-[80] w-full">
           <Image
             src={product.media?.mainMedia?.image?.url}
             alt=""
@@ -30,7 +31,7 @@ const ProductCard = ({ product }: { product: any }) => {
 
       <div className="mt-2">
         <div className="flex flex-col gap-2 w-full justify-between text-sm mb-2">
-          <p className="font-semibold text-sm capitalize flex-1">
+          <p className="font-semibold text-xs lg:text-sm capitalize flex-1 whitespace-nowrap overflow-hidden text-ellipsis">
             {product.name}
             <br />
             <span className="text-xs text-gray-500 ">
@@ -62,6 +63,7 @@ const ProductCard = ({ product }: { product: any }) => {
         >
           Add to cart
         </Button>
+        <ProductModal product={product} />
       </div>
     </div>
   );

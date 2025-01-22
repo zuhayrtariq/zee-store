@@ -37,7 +37,7 @@ const CategoriesCarousel = async () => {
                     src={category.media?.mainMedia?.image?.url || ""}
                     alt="P"
                     fill
-                    sizes={"100vw"}
+                    sizes={"25vw"}
                     className=" object-cover rounded-md group-hover:brightness-75"
                   />
                 </div>{" "}

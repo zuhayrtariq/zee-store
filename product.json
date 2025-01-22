@@ -1,0 +1,693 @@
+{
+  "name": "Patent T-Strap Loafers",
+  "slug": "patent-t-strap-loafers",
+  "visible": true,
+  "productType": "physical",
+  "description": "xxxxComposition &amp; Care:\\n\\nDo not wash\\nDo not bleach\\nDo not dry clean\\nDo not tumble dry\\nDo not submerge in waterxxxx",
+  "weightRange": {
+    "minValue": 0,
+    "maxValue": 0
+  },
+  "stock": {
+    "trackInventory": true,
+    "quantity": 120,
+    "inStock": true,
+    "inventoryStatus": "IN_STOCK"
+  },
+  "price": {
+    "currency": "PKR",
+    "price": 6490,
+    "discountedPrice": 6490,
+    "formatted": {
+      "price": "₨6,490.00",
+      "discountedPrice": "₨6,490.00"
+    }
+  },
+  "priceData": {
+    "currency": "PKR",
+    "price": 6490,
+    "discountedPrice": 6490,
+    "formatted": {
+      "price": "₨6,490.00",
+      "discountedPrice": "₨6,490.00"
+    }
+  },
+  "convertedPriceData": {
+    "currency": "PKR",
+    "price": 6490,
+    "discountedPrice": 6490,
+    "formatted": {
+      "price": "₨6,490.00",
+      "discountedPrice": "₨6,490.00"
+    }
+  },
+  "priceRange": {
+    "minValue": 6490,
+    "maxValue": 6490
+  },
+  "costRange": {
+    "minValue": 0,
+    "maxValue": 0
+  },
+  "additionalInfoSections": [
+    {
+      "title": "Shipping Info",
+      "description": "<p dir=\"ltr\">FLAT Shipping 249 PKR + FBR POS Fee 1 PKR will be charged on order within Pakistan.</p><p >&nbsp;</p><p dir=\"ltr\">All orders may take up to 5-7 working days in regular days and during sales it will be delivered in 7-10 working days.</p>"
+    },
+    {
+      "title": "Return Policy",
+      "description": "<p dir=\"ltr\"> All products purchased from Zeestore can be exchanged within 14 days of purchase only if:-</p><p >&nbsp;</p><p dir=\"ltr\">The item(s) is faulty, damaged or defective at the time of delivery.</p><p >&nbsp;</p><p dir=\"ltr\">The item(s) does not match the original specifications of the product or is found to be not the same as you had actually purchased.</p>"
+    }
+  ],
+  "ribbons": [],
+  "media": {
+    "mainMedia": {
+      "thumbnail": {
+        "url": "https://static.wixstatic.com/media/b7219e_5a13340a6730407f947bbe1d4e747311~mv2.jpg/v1/fit/w_50,h_50,q_90/file.jpg",
+        "width": 50,
+        "height": 50
+      },
+      "mediaType": "image",
+      "title": "",
+      "image": {
+        "url": "https://static.wixstatic.com/media/b7219e_5a13340a6730407f947bbe1d4e747311~mv2.jpg/v1/fit/w_1920,h_2879,q_90/file.jpg",
+        "width": 1920,
+        "height": 2879
+      },
+      "_id": "b7219e_5a13340a6730407f947bbe1d4e747311~mv2.jpg"
+    },
+    "items": [
+      {
+        "thumbnail": {
+          "url": "https://static.wixstatic.com/media/b7219e_5a13340a6730407f947bbe1d4e747311~mv2.jpg/v1/fit/w_50,h_50,q_90/file.jpg",
+          "width": 50,
+          "height": 50
+        },
+        "mediaType": "image",
+        "title": "",
+        "image": {
+          "url": "https://static.wixstatic.com/media/b7219e_5a13340a6730407f947bbe1d4e747311~mv2.jpg/v1/fit/w_1920,h_2879,q_90/file.jpg",
+          "width": 1920,
+          "height": 2879
+        },
+        "_id": "b7219e_5a13340a6730407f947bbe1d4e747311~mv2.jpg"
+      },
+      {
+        "thumbnail": {
+          "url": "https://static.wixstatic.com/media/b7219e_444073f15d72440e84f31eb4e59e043a~mv2.jpg/v1/fit/w_50,h_50,q_90/file.jpg",
+          "width": 50,
+          "height": 50
+        },
+        "mediaType": "image",
+        "title": "",
+        "image": {
+          "url": "https://static.wixstatic.com/media/b7219e_444073f15d72440e84f31eb4e59e043a~mv2.jpg/v1/fit/w_1920,h_2879,q_90/file.jpg",
+          "width": 1920,
+          "height": 2879
+        },
+        "_id": "b7219e_444073f15d72440e84f31eb4e59e043a~mv2.jpg"
+      },
+      {
+        "thumbnail": {
+          "url": "https://static.wixstatic.com/media/b7219e_3902dc0471c446e8bddc96e2d793cddb~mv2.jpg/v1/fit/w_50,h_50,q_90/file.jpg",
+          "width": 50,
+          "height": 50
+        },
+        "mediaType": "image",
+        "title": "",
+        "image": {
+          "url": "https://static.wixstatic.com/media/b7219e_3902dc0471c446e8bddc96e2d793cddb~mv2.jpg/v1/fit/w_1920,h_2879,q_90/file.jpg",
+          "width": 1920,
+          "height": 2879
+        },
+        "_id": "b7219e_3902dc0471c446e8bddc96e2d793cddb~mv2.jpg"
+      },
+      {
+        "thumbnail": {
+          "url": "https://static.wixstatic.com/media/b7219e_a088b799497b436fa378fd6b994ec406~mv2.jpg/v1/fit/w_50,h_50,q_90/file.jpg",
+          "width": 50,
+          "height": 50
+        },
+        "mediaType": "image",
+        "title": "",
+        "image": {
+          "url": "https://static.wixstatic.com/media/b7219e_a088b799497b436fa378fd6b994ec406~mv2.jpg/v1/fit/w_1920,h_2879,q_90/file.jpg",
+          "width": 1920,
+          "height": 2879
+        },
+        "_id": "b7219e_a088b799497b436fa378fd6b994ec406~mv2.jpg"
+      },
+      {
+        "thumbnail": {
+          "url": "https://static.wixstatic.com/media/b7219e_7769df4536e74ffa9aed20afb4a3aa0a~mv2.jpg/v1/fit/w_50,h_50,q_90/file.jpg",
+          "width": 50,
+          "height": 50
+        },
+        "mediaType": "image",
+        "title": "",
+        "image": {
+          "url": "https://static.wixstatic.com/media/b7219e_7769df4536e74ffa9aed20afb4a3aa0a~mv2.jpg/v1/fit/w_1920,h_2879,q_90/file.jpg",
+          "width": 1920,
+          "height": 2879
+        },
+        "_id": "b7219e_7769df4536e74ffa9aed20afb4a3aa0a~mv2.jpg"
+      },
+      {
+        "thumbnail": {
+          "url": "https://static.wixstatic.com/media/b7219e_20a77619927d468fb32db80fedca67da~mv2.jpg/v1/fit/w_50,h_50,q_90/file.jpg",
+          "width": 50,
+          "height": 50
+        },
+        "mediaType": "image",
+        "title": "",
+        "image": {
+          "url": "https://static.wixstatic.com/media/b7219e_20a77619927d468fb32db80fedca67da~mv2.jpg/v1/fit/w_1920,h_2879,q_90/file.jpg",
+          "width": 1920,
+          "height": 2879
+        },
+        "_id": "b7219e_20a77619927d468fb32db80fedca67da~mv2.jpg"
+      },
+      {
+        "thumbnail": {
+          "url": "https://static.wixstatic.com/media/b7219e_fe68c09afc80451fa22fde5272a791a7~mv2.jpg/v1/fit/w_50,h_50,q_90/file.jpg",
+          "width": 50,
+          "height": 50
+        },
+        "mediaType": "image",
+        "title": "",
+        "image": {
+          "url": "https://static.wixstatic.com/media/b7219e_fe68c09afc80451fa22fde5272a791a7~mv2.jpg/v1/fit/w_1920,h_2879,q_90/file.jpg",
+          "width": 1920,
+          "height": 2879
+        },
+        "_id": "b7219e_fe68c09afc80451fa22fde5272a791a7~mv2.jpg"
+      }
+    ]
+  },
+  "customTextFields": [],
+  "manageVariants": true,
+  "productOptions": [
+    {
+      "optionType": "color",
+      "name": "Color",
+      "choices": [
+        {
+          "value": "#000000",
+          "description": "Black",
+          "inStock": true,
+          "visible": true
+        },
+        {
+          "value": "#ffc0cb",
+          "description": "Pink",
+          "inStock": true,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "optionType": "drop_down",
+      "name": "Size",
+      "choices": [
+        {
+          "value": "31",
+          "description": "31",
+          "inStock": true,
+          "visible": true
+        },
+        {
+          "value": "32",
+          "description": "32",
+          "inStock": true,
+          "visible": true
+        },
+        {
+          "value": "33",
+          "description": "33",
+          "inStock": true,
+          "visible": true
+        },
+        {
+          "value": "34",
+          "description": "34",
+          "inStock": true,
+          "visible": true
+        },
+        {
+          "value": "35",
+          "description": "35",
+          "inStock": true,
+          "visible": true
+        },
+        {
+          "value": "36",
+          "description": "36",
+          "inStock": true,
+          "visible": true
+        }
+      ]
+    }
+  ],
+  "productPageUrl": {
+    "base": "https://zuhayrtariq4.wixsite.com/zee-store",
+    "path": "/product-page/patent-t-strap-loafers"
+  },
+  "numericId": "1737317243229228",
+  "inventoryItemId": "61c28174-364a-b99f-5552-03cf4c7d14c7",
+  "discount": {
+    "type": "NONE",
+    "value": 0
+  },
+  "collectionIds": [
+    "cc148c26-7581-65cd-793a-9af26ea6f216",
+    "c9026cd8-3ad6-5773-445c-61910171fe09",
+    "00000000-000000-000000-000000000001"
+  ],
+  "variants": [
+    {
+      "choices": {
+        "Color": "Black",
+        "Size": "31"
+      },
+      "variant": {
+        "priceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "convertedPriceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "weight": 0,
+        "sku": "F0115/612/901-50559604",
+        "visible": true
+      },
+      "stock": {
+        "trackQuantity": true,
+        "quantity": 10,
+        "inStock": true
+      },
+      "_id": "cfa59f6a-0091-4939-ba82-5bc8faf60e73"
+    },
+    {
+      "choices": {
+        "Color": "Black",
+        "Size": "32"
+      },
+      "variant": {
+        "priceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "convertedPriceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "weight": 0,
+        "sku": "F0115/612/901-50559605",
+        "visible": true
+      },
+      "stock": {
+        "trackQuantity": true,
+        "quantity": 10,
+        "inStock": true
+      },
+      "_id": "9a01fd43-fbef-4a7e-8071-854ffbe6d918"
+    },
+    {
+      "choices": {
+        "Color": "Black",
+        "Size": "33"
+      },
+      "variant": {
+        "priceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "convertedPriceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "weight": 0,
+        "sku": "F0115/612/901-50559606",
+        "visible": true
+      },
+      "stock": {
+        "trackQuantity": true,
+        "quantity": 10,
+        "inStock": true
+      },
+      "_id": "98e18d54-7273-4479-b00a-6cced24c5401"
+    },
+    {
+      "choices": {
+        "Color": "Black",
+        "Size": "34"
+      },
+      "variant": {
+        "priceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "convertedPriceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "weight": 0,
+        "sku": "F0115/612/901-50559607",
+        "visible": true
+      },
+      "stock": {
+        "trackQuantity": true,
+        "quantity": 10,
+        "inStock": true
+      },
+      "_id": "1dc230ec-776d-472f-900f-dbb8e33be572"
+    },
+    {
+      "choices": {
+        "Color": "Black",
+        "Size": "35"
+      },
+      "variant": {
+        "priceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "convertedPriceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "weight": 0,
+        "sku": "F0115/612/901-50559608",
+        "visible": true
+      },
+      "stock": {
+        "trackQuantity": true,
+        "quantity": 10,
+        "inStock": true
+      },
+      "_id": "ee098526-fc88-4780-818d-cfab75cd5487"
+    },
+    {
+      "choices": {
+        "Color": "Black",
+        "Size": "36"
+      },
+      "variant": {
+        "priceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "convertedPriceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "weight": 0,
+        "sku": "F0115/612/901-50559603",
+        "visible": true
+      },
+      "stock": {
+        "trackQuantity": true,
+        "quantity": 10,
+        "inStock": true
+      },
+      "_id": "200d6ab4-21eb-4866-be35-6ad688e8d305"
+    },
+    {
+      "choices": {
+        "Color": "Pink",
+        "Size": "31"
+      },
+      "variant": {
+        "priceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "convertedPriceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "weight": 0,
+        "sku": "F0115/612/401-50559598",
+        "visible": true
+      },
+      "stock": {
+        "trackQuantity": true,
+        "quantity": 10,
+        "inStock": true
+      },
+      "_id": "e0e0014c-7ed8-42cd-a891-45c83b62ce5d"
+    },
+    {
+      "choices": {
+        "Color": "Pink",
+        "Size": "32"
+      },
+      "variant": {
+        "priceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "convertedPriceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "weight": 0,
+        "sku": "F0115/612/401-50559599",
+        "visible": true
+      },
+      "stock": {
+        "trackQuantity": true,
+        "quantity": 10,
+        "inStock": true
+      },
+      "_id": "dd7bf78d-cda1-45d6-b55c-95c468604153"
+    },
+    {
+      "choices": {
+        "Color": "Pink",
+        "Size": "33"
+      },
+      "variant": {
+        "priceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "convertedPriceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "weight": 0,
+        "sku": "F0115/612/401-50559600",
+        "visible": true
+      },
+      "stock": {
+        "trackQuantity": true,
+        "quantity": 10,
+        "inStock": true
+      },
+      "_id": "8952e8a0-3fde-4198-866a-85e957bcefb2"
+    },
+    {
+      "choices": {
+        "Color": "Pink",
+        "Size": "34"
+      },
+      "variant": {
+        "priceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "convertedPriceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "weight": 0,
+        "sku": "F0115/612/401-50559601",
+        "visible": true
+      },
+      "stock": {
+        "trackQuantity": true,
+        "quantity": 10,
+        "inStock": true
+      },
+      "_id": "68b2d7bc-6eca-49d2-853c-ee5b50f8e7e2"
+    },
+    {
+      "choices": {
+        "Color": "Pink",
+        "Size": "35"
+      },
+      "variant": {
+        "priceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "convertedPriceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "weight": 0,
+        "sku": "F0115/612/401-50559602",
+        "visible": true
+      },
+      "stock": {
+        "trackQuantity": true,
+        "quantity": 10,
+        "inStock": true
+      },
+      "_id": "1b6269e9-4909-45aa-8086-a6ba6b364cc6"
+    },
+    {
+      "choices": {
+        "Color": "Pink",
+        "Size": "36"
+      },
+      "variant": {
+        "priceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "convertedPriceData": {
+          "currency": "PKR",
+          "price": 6490,
+          "discountedPrice": 6490,
+          "formatted": {
+            "price": "₨6,490.00",
+            "discountedPrice": "₨6,490.00"
+          }
+        },
+        "weight": 0,
+        "sku": "F0115/612/401-50559597",
+        "visible": true
+      },
+      "stock": {
+        "trackQuantity": true,
+        "quantity": 10,
+        "inStock": true
+      },
+      "_id": "f7a0f66a-cf61-4cb4-9441-40b4166b5cbc"
+    }
+  ],
+  "lastUpdated": "2025-01-21T18:51:42.570Z",
+  "ribbon": "",
+  "exportProductId": "Product_35",
+  "_id": "9e3d7e8b-c9b5-4660-aaad-fc30b382eb38",
+  "_createdDate": "2025-01-19T20:07:23.229Z"
+}
