@@ -6,6 +6,7 @@ import { WixClientContextProvider } from "@/context/wixContext";
 import { cg, montserrat } from "./fonts";
 import { Suspense } from "react";
 import Loading from "./loading";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: "Zee Store",
@@ -27,6 +28,7 @@ export default function RootLayout({
             <Footer />
           </Suspense>
         </WixClientContextProvider>
+        <Toaster />
       </body>
     </html>
   );

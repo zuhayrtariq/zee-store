@@ -37,11 +37,10 @@ export function ProductModal({ product }: { product: any }) {
             <ShoppingBasketIcon />
           </div>
         </ModalTrigger>
-        <ModalBody>
+
+        <ModalBody className="  overflow-y-auto">
           <ModalContent>
-            {/* //overflow-x-scroll overflow-y-hidden */}
             <div className="flex justify-center items-center ">
-              {/* <ProductsCarousel slides={imagesData} /> */}
               <ProductModelCarousel images={images} />
             </div>
             <div>
@@ -49,11 +48,11 @@ export function ProductModal({ product }: { product: any }) {
                 <div className="flex  flex-col">
                   <h2 className="text-xl font-semibold ">{product.name}</h2>
                   <hr />
-                  <p>
+                  {/* <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Doloribus, dolores ut tempora ad beatae nihil doloremque
                     ducimus nisi quas repellendus!
-                  </p>
+                  </p> */}
                 </div>
                 <div className="  flex flex-col">
                   {/* <div className="flex items-center gap-x-4">
@@ -94,7 +93,7 @@ export function ProductModal({ product }: { product: any }) {
               Cancel
             </button>
             <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
-              Book Now
+              Add to cart
             </button>
           </ModalFooter>
         </ModalBody>

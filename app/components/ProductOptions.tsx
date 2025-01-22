@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useCartStore } from "@/hooks/useCartStore";
 import { useWixClient } from "@/hooks/useWixClient";
 import { products } from "@wix/stores";
+
 import {
   ArrowLeft,
   ChevronLeft,
@@ -11,8 +12,9 @@ import {
   PlusIcon,
 } from "lucide-react";
 import React, { useEffect, useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
-const CustomizeProducts = ({
+const ProductOptions = ({
   productId,
   variants,
   productOptions,
@@ -21,28 +23,27 @@ const CustomizeProducts = ({
   variants: products.Variant[];
   productOptions: products.ProductOption[];
 }) => {
-  console.log("V", variants);
+  const { cart, addItem } = useCartStore();
+  const { toast } = useToast();
   const wixClient = useWixClient();
   const [quantity, setQuantity] = useState(1);
   const [selectedOptions, setSelectedOptions] = useState<{
     [key: string]: string;
   }>({});
   const [selectedVariant, setSelectedVariant] = useState<products.Variant>();
-  const maxQuantity = selectedVariant?.stock?.quantity;
 
-  useEffect(() => {
+  const handleOptionsSelect = (optionType: string, choice: string) => {
+    setSelectedOptions((prev) => ({ ...prev, [optionType]: choice }));
+    const opts = { ...selectedOptions, [optionType]: choice };
     const variant = variants.find((v) => {
       const variantChoices = v.choices!;
       if (!variantChoices) return false;
-      return Object.entries(selectedOptions).every(
-        ([key, value]) => variantChoices[key] === value
+      return Object.entries(variantChoices).every(
+        ([key, value]) => opts[key] === value
       );
     });
-    console.log(variant);
+    console.log("Initial Variant : ", variant);
     setSelectedVariant(variant);
-  }, [selectedOptions, variants]);
-  const handleOptionsSelect = (optionType: string, choice: string) => {
-    setSelectedOptions((prev) => ({ ...prev, [optionType]: choice }));
   };
 
   const isVariantInStock = (choices: { [key: string]: string }) => {
@@ -59,31 +60,32 @@ const CustomizeProducts = ({
       );
     });
   };
-  const updateQuantity = (opr = "-") => {
-    if (quantity == 1 && opr == "-") return;
-    if (quantity == selectedVariant?.stock?.quantity && opr == "+") return;
-    if (opr == "+") setQuantity(quantity + 1);
-    else setQuantity(quantity - 1);
-  };
-
-  const { cart, addItem } = useCartStore();
 
   async function addToCart() {
-    const response = addItem(
-      wixClient,
-      productId,
-      selectedVariant?._id!,
-      quantity
-    );
-    console.log(response);
+    console.log("Selected Variant", selectedVariant);
+    if (selectedVariant) {
+      const response = addItem(wixClient, productId, selectedVariant?._id!, 1);
+      console.log(response);
+      toast({
+        title: "Product Added To Cart",
+        // description: "Please Select All Options",
+      });
+    } else {
+      console.log("Called");
+      toast({
+        title: "Uh oh! Something went wrong.",
+        description: "Please Select All Options",
+        variant: "destructive",
+      });
+    }
   }
   return (
     <div className="flex flex-col gap-6">
       {productOptions.map((option) => (
         <div key={option.name}>
-          <h4 className="font-semibold pb-2 text-xl">Choose a {option.name}</h4>
+          <h4 className="font-semibold pb-2 text-lg">{option.name}</h4>
 
-          <div className="flex gap-4 flex-wrap">
+          <div className="flex flex-wrap gap-4">
             {option.choices?.map((choice) => {
               const disabled = !isVariantInStock({
                 ...selectedOptions,
@@ -93,7 +95,7 @@ const CustomizeProducts = ({
                 selectedOptions[option.name!] === choice.description;
               return (
                 <Button
-                  className={`px-2 h-8 capitalize  rounded-lg outline `}
+                  className={`px-2 h-8 capitalize  rounded-lg outline w-[160px] `}
                   variant={selected ? "default" : "outline"}
                   disabled={disabled}
                   key={choice.description}
@@ -101,6 +103,14 @@ const CustomizeProducts = ({
                     handleOptionsSelect(option.name!, choice.description!)
                   }
                 >
+                  {option.name == "Color" && (
+                    <span
+                      className="w-4 h-4 rounded-full border"
+                      style={{
+                        backgroundColor: choice?.value || "white",
+                      }}
+                    ></span>
+                  )}
                   {choice.description}
                 </Button>
               );
@@ -110,6 +120,7 @@ const CustomizeProducts = ({
       ))}
 
       <div className="">
+        {/* <>
         <h4 className="font-semibold pb-2 text-xl">
           Choose a Quantity {quantity}
         </h4>
@@ -128,7 +139,7 @@ const CustomizeProducts = ({
               <span
                 className="flex items-center w-4 h-4 "
                 onClick={() => updateQuantity("+")}
-              >
+                >
                 <PlusIcon className="" />
               </span>
             </div>
@@ -136,13 +147,15 @@ const CustomizeProducts = ({
               Only {selectedVariant?.stock?.quantity! - quantity} item remains
             </p>
           </div>
-          <Button variant={"destructive"} onClick={addToCart}>
-            Add To Cart
-          </Button>
+         
         </div>
+                  </> */}
+        <Button variant={"destructive"} onClick={addToCart}>
+          Add To Cart
+        </Button>
       </div>
     </div>
   );
 };
 
-export default CustomizeProducts;
+export default ProductOptions;

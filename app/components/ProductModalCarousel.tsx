@@ -19,7 +19,7 @@ const ProductModelCarousel = async ({ images }: { images: string[] }) => {
           align: "start",
         }}
       >
-        <CarouselContent className="h-full aspect-square w-[300px]">
+        <CarouselContent className="h-full aspect-square w-[200px]">
           {images.map((img) => (
             <CarouselItem className=" " key={img}>
               <div className="relative w-full h-full ">
