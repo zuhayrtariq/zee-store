@@ -17,13 +17,11 @@ const ProductsLayout = async ({ searchParams }: { searchParams: any }) => {
   let data = await wixClient.products
     .queryProducts()
     .eq("collectionIds", cat.collection?._id)
-    .startsWith("name", params?.name || "")
     .gt("priceData.price", params?.min || 0)
-    .lt("priceData.price", params?.max || 999999)
-    .limit(PRODUCTS_PER_PAGE)
-    .skip(params.page ? parseInt(params.page) * PRODUCTS_PER_PAGE : 0);
+    .lt("priceData.price", params?.max || 999999);
+  // .limit(PRODUCTS_PER_PAGE)
+  // .skip(params.page ? parseInt(params.page) * PRODUCTS_PER_PAGE : 0);
 
-  //   data;
   if (params?.Sort) {
     console.log("Called");
     const [sortType, sortBy] = params.Sort.split(" ");
@@ -38,8 +36,12 @@ const ProductsLayout = async ({ searchParams }: { searchParams: any }) => {
   }
   const { items, currentPage } = await data.find();
   const d = await data.find();
-
-  const productsData = items.filter((product) => {
+  const filteredItems = items.filter((x) => {
+    if (params?.name) {
+      if (x.name?.toLowerCase().includes(params?.name.toLowerCase())) return x;
+    } else return x;
+  });
+  const productsData = filteredItems.filter((product) => {
     const opts = product.productOptions;
 
     return opts?.every((opt) => {
@@ -61,11 +63,11 @@ const ProductsLayout = async ({ searchParams }: { searchParams: any }) => {
         ))}
       </div>
 
-      <Pagination
+      {/* <Pagination
         currentPage={currentPage || 0}
         hasPrev={d.hasPrev()}
         hasNext={d.hasNext()}
-      />
+      /> */}
     </>
   );
 };

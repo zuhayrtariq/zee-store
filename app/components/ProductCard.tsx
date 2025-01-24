@@ -7,7 +7,7 @@ import { ProductModal } from "./ProductModal";
 
 const ProductCard = ({ product }: { product: any }) => {
   return (
-    <div>
+    <div className="flex flex-col gap-4 ">
       <Link href={"/" + product.slug}>
         <div className="relative h-60  lg:h-[80] w-full">
           <Image
@@ -56,14 +56,9 @@ const ProductCard = ({ product }: { product: any }) => {
             )}
           </p>
         </div>
-        <Button
-          variant={"outline"}
-          size={"sm"}
-          className="hover:bg-primary hover:text-background rounded-2xl font-semibold text-sm"
-        >
-          Add to cart
-        </Button>
-        <ProductModal product={product} />
+        <div className="pb-4">
+          <ProductModal product={product} />
+        </div>
       </div>
     </div>
   );

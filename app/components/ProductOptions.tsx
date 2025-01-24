@@ -4,27 +4,24 @@ import { useCartStore } from "@/hooks/useCartStore";
 import { useWixClient } from "@/hooks/useWixClient";
 import { products } from "@wix/stores";
 
-import {
-  ArrowLeft,
-  ChevronLeft,
-  ChevronRight,
-  MinusIcon,
-  PlusIcon,
-} from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useModal } from "@/components/ui/animated-modal";
 
 const ProductOptions = ({
   productId,
   variants,
   productOptions,
+  modal = false,
 }: {
   productId: string;
   variants: products.Variant[];
   productOptions: products.ProductOption[];
+  modal?: boolean;
 }) => {
   const { cart, addItem } = useCartStore();
   const { toast } = useToast();
+  const { setOpen } = useModal();
   const wixClient = useWixClient();
   const [quantity, setQuantity] = useState(1);
   const [selectedOptions, setSelectedOptions] = useState<{
@@ -70,6 +67,9 @@ const ProductOptions = ({
         title: "Product Added To Cart",
         // description: "Please Select All Options",
       });
+      if (modal) {
+        setOpen(false);
+      }
     } else {
       console.log("Called");
       toast({
@@ -85,7 +85,7 @@ const ProductOptions = ({
         <div key={option.name}>
           <h4 className="font-semibold pb-2 text-lg">{option.name}</h4>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap  gap-4">
             {option.choices?.map((choice) => {
               const disabled = !isVariantInStock({
                 ...selectedOptions,
@@ -150,9 +150,13 @@ const ProductOptions = ({
          
         </div>
                   </> */}
-        <Button variant={"destructive"} onClick={addToCart}>
-          Add To Cart
-        </Button>
+        <div
+          className={`${modal && " flex justify-center items-center w-full"}`}
+        >
+          <Button variant={"destructive"} onClick={addToCart}>
+            Add To Cart
+          </Button>
+        </div>
       </div>
     </div>
   );

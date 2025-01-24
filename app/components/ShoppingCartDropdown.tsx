@@ -44,8 +44,8 @@ const ShoppingCartDropdown = () => {
         ) : (
           <>
             <div className="flex flex-col gap-4 mb-3">
-              {cart.lineItems?.map((product) => (
-                <>
+              {cart.lineItems?.map((product, i) => (
+                <div key={product._id! + i}>
                   {/* {console.log(wixMedia.getImageUrl(product.image!))} */}
                   <div className="flex gap-2">
                     <Image
@@ -81,7 +81,7 @@ const ShoppingCartDropdown = () => {
                       </div>
                     </div>
                   </div>
-                </>
+                </div>
               ))}
             </div>
             <div>
