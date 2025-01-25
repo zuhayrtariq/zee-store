@@ -14,7 +14,7 @@ import Cookies from "js-cookie";
 const UserProfileDropdown = ({ user }: { user: any }) => {
   const wixClient = useWixClient();
   const isLoggedIn = wixClient.auth.loggedIn();
-  console.log(isLoggedIn);
+
   const login = async () => {
     const loginRequestData = wixClient.auth.generateOAuthData(
       process.env.NEXT_CALLBACK_URL || "http://localhost:3000"
@@ -35,9 +35,8 @@ const UserProfileDropdown = ({ user }: { user: any }) => {
 
     try {
       const { code, state } = await wixClient.auth.parseFromUrl();
-      console.log(code, state);
+
       const tokens = await wixClient.auth.getMemberTokens(code, state, data);
-      console.log("These", tokens);
       Cookies.set("refreshToken", JSON.stringify(tokens.refreshToken));
       Cookies.set("accessToken", JSON.stringify(tokens.accessToken));
       wixClient.auth.setTokens(tokens);

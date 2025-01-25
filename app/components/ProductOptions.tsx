@@ -85,7 +85,7 @@ const ProductOptions = ({
         <div key={option.name}>
           <h4 className="font-semibold pb-2 text-lg">{option.name}</h4>
 
-          <div className="flex flex-wrap  gap-4">
+          <div className="flex flex-wrap w-full justify-center md:justify-normal  gap-4">
             {option.choices?.map((choice) => {
               const disabled = !isVariantInStock({
                 ...selectedOptions,
@@ -95,7 +95,7 @@ const ProductOptions = ({
                 selectedOptions[option.name!] === choice.description;
               return (
                 <Button
-                  className={`px-2 h-8 capitalize  rounded-lg outline w-[160px] `}
+                  className={` h-8 capitalize  rounded-lg outline w-[160px] text-xs md:text-sm overflow-clip`}
                   variant={selected ? "default" : "outline"}
                   disabled={disabled}
                   key={choice.description}
@@ -105,7 +105,7 @@ const ProductOptions = ({
                 >
                   {option.name == "Color" && (
                     <span
-                      className="w-4 h-4 rounded-full border"
+                      className="w-4 h-4 rounded-full border "
                       style={{
                         backgroundColor: choice?.value || "white",
                       }}
@@ -120,38 +120,12 @@ const ProductOptions = ({
       ))}
 
       <div className="">
-        {/* <>
-        <h4 className="font-semibold pb-2 text-xl">
-          Choose a Quantity {quantity}
-        </h4>
-        <div className="flex gap-x-8 items-center">
-          <div className="flex gap-x-4 items-center">
-            <div className="bg-secondary cursor-pointer h-11 flex items-center justify-center font-medium rounded-full py-4 px-2 select-none ">
-              <span
-                className=" flex items-center w-4 h-4 "
-                onClick={() => updateQuantity("-")}
-              >
-                <MinusIcon />
-              </span>
-              <p className="cursor-default w-[100px] flex items-center justify-center">
-                {quantity}
-              </p>
-              <span
-                className="flex items-center w-4 h-4 "
-                onClick={() => updateQuantity("+")}
-                >
-                <PlusIcon className="" />
-              </span>
-            </div>
-            <p>
-              Only {selectedVariant?.stock?.quantity! - quantity} item remains
-            </p>
-          </div>
-         
-        </div>
-                  </> */}
         <div
-          className={`${modal && " flex justify-center items-center w-full"}`}
+          className={`${
+            modal
+              ? " flex justify-center items-center w-full"
+              : " flex justify-center items-center w-full md:block"
+          }`}
         >
           <Button variant={"destructive"} onClick={addToCart}>
             Add To Cart

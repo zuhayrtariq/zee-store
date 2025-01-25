@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight, ChevronRightCircle } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
-const ProductImageCarousel = ({ imagesData }: { imagesData: any }) => {
+const ProductImageCarousel = ({ imagesData }: { imagesData: string[] }) => {
   //   imagesData = imagesData.filter((x: any, i: number) => i < 7);
   const [mainImg, setMainImg] = useState(0);
   const changeImage = (opr = "+") => {
@@ -31,10 +31,10 @@ const ProductImageCarousel = ({ imagesData }: { imagesData: any }) => {
                 mainImg == i && "brightness-90"
               }`}
               onMouseEnter={() => setMainImg(i)}
-              key={x.src}
+              key={x}
             >
               <Image
-                src={x.src}
+                src={x}
                 alt="Product Img"
                 className="object-fill"
                 fill
@@ -47,7 +47,7 @@ const ProductImageCarousel = ({ imagesData }: { imagesData: any }) => {
       <div className="flex  w-[400px]  bg-gray-200 ">
         <div className="relative w-[400px] h-full rounded-lg overflow-hidden flex items-center justify-center aspect-[3/2] ">
           <Image
-            src={imagesData[mainImg].src}
+            src={imagesData[mainImg]}
             alt="Product Img"
             className="object-contain "
             fill

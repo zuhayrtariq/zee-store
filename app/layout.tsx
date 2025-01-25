@@ -7,6 +7,7 @@ import { cg, montserrat } from "./fonts";
 import { Suspense } from "react";
 import Loading from "./loading";
 import { Toaster } from "@/components/ui/toaster";
+import { Modal } from "@/components/ui/animated-modal";
 
 export const metadata: Metadata = {
   title: "Zee Store",
@@ -20,13 +21,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cg.className} ${montserrat.className}`}>
-      <body className="min-h-[100vh] overflow-x-hidden">
+      <body className="min-h-[100vh]">
         <WixClientContextProvider>
-          <Suspense fallback={<Loading />}>
-            <Header />
-            {children}
-            <Footer />
-          </Suspense>
+          <Modal>
+            <Suspense fallback={<Loading />}>
+              <Header />
+              {children}
+              <Footer />
+            </Suspense>
+          </Modal>
         </WixClientContextProvider>
         <Toaster />
       </body>

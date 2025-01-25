@@ -25,7 +25,6 @@ const ShoppingCartDropdown = () => {
   useEffect(() => {
     getCart(wixClient);
   }, [wixClient, getCart]);
-  console.log("Cart : ", cart);
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="relative outline-none">
