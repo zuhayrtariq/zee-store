@@ -9,13 +9,13 @@ const ProductCard = ({ product }: { product: any }) => {
   return (
     <div className="flex flex-col gap-4 ">
       <Link href={"/" + product.slug}>
-        <div className="relative h-60  lg:h-[80] w-full">
+        <div className="relative h-72  lg:h-80 w-full">
           <Image
             src={product.media?.mainMedia?.image?.url}
             alt=""
             sizes="25vw"
             fill
-            className=" object-cover rounded-md absolute hover:opacity-0 z-10 transition-all duration-200"
+            className=" object-cover  rounded-md absolute hover:opacity-0 z-10 transition-all duration-200"
           />
           {product.media?.items && (
             <Image

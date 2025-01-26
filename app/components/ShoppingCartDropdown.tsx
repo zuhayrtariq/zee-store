@@ -1,6 +1,8 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { media, media as wixMedia } from "@wix/sdk";
+
+import { currentCart } from "@wix/ecom";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,6 +19,7 @@ import { useCartStore } from "@/hooks/useCartStore";
 
 const ShoppingCartDropdown = () => {
   const wixClient = useWixClient();
+  const [totalPrice, setTotalPrice] = useState(0);
   const { cart, getCart, removeItem } = useCartStore();
 
   const removeCartItem = (id: string) => {
@@ -25,13 +28,17 @@ const ShoppingCartDropdown = () => {
   useEffect(() => {
     getCart(wixClient);
   }, [wixClient, getCart]);
+  let quantity = 0;
+  cart.lineItems?.forEach((x: any) => {
+    quantity += x.quantity;
+  });
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="relative outline-none">
         <ShoppingCartIcon className="w-6 h-6 cursor-pointer " />
-        {cart?.lineItems?.length && (
+        {quantity > 0 && (
           <span className="absolute bottom-2.5 h-6 w-6 left-3 bg-red-500 text-white  text-xs rounded-full flex justify-center items-center">
-            {cart?.lineItems?.length}
+            {quantity}
           </span>
         )}
       </DropdownMenuTrigger>
@@ -60,11 +67,13 @@ const ShoppingCartDropdown = () => {
                       className="object-cover rounded-md"
                     />
                     <div className="flex flex-col flex-1 justify-between">
-                      <div className="flex items-center justify-between">
+                      <div className="flex  flex-col  justify-between">
                         <p className="text-sm font-semibold">
                           {product.productName?.original}
                         </p>
-                        <p className="text-sm ">$40.5</p>
+                        <p className="text-sm ">
+                          {product.price?.formattedAmount}
+                        </p>
                       </div>
 
                       <div className="flex items-center justify-between">
@@ -86,17 +95,14 @@ const ShoppingCartDropdown = () => {
             <div>
               <div className="flex justify-between font-bold text-sm">
                 <h3>Subtotal</h3>
-                <h3>$0</h3>
+                <h3>{cart?.subtotal?.formattedAmount! || "---"}</h3>
               </div>
 
               <p className="text-xs text-gray-500 py-2">
                 Shipping and taxes calculated at checkout.
               </p>
 
-              <div className="flex items-center justify-between ">
-                <Button variant={"secondary"} size={"sm"}>
-                  View Cart
-                </Button>
+              <div className="flex items-center justify-end ">
                 <Button className="relative" size={"sm"}>
                   Checkout
                 </Button>

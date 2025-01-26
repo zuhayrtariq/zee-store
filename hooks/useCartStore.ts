@@ -1,14 +1,20 @@
 import { create } from 'zustand'
 import { currentCart } from "@wix/ecom";
 import { WixClient } from '@/context/wixContextClient';
+interface NewCartType extends currentCart.Cart {
+    subtotal?: any;
+}
 type CartState = {
-    cart: currentCart.Cart;
+    cart: NewCartType;
     isLoading: boolean;
     counter: number;
     getCart: (wixClient: WixClient) => void;
     addItem: (wixClient: WixClient, productId: string, variantId: string, quantity: number) => void;
     removeItem: (wixClient: WixClient, itemId: string) => void;
 }
+
+
+
 export const useCartStore = create<CartState>((set) => ({
     cart: [],
     isLoading: true,
