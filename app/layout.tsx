@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { WixClientContextProvider } from "@/context/wixContext";
+import { WixClientContextProvider } from "@/context/wixContextClient";
 import { cg, montserrat } from "./fonts";
 import { Suspense } from "react";
 import Loading from "./loading";

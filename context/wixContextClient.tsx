@@ -3,6 +3,7 @@ import { createClient, OAuthStrategy } from "@wix/sdk";
 // import { availabilityCalendar, services } from "@wix/bookings";
 import { products, collections } from "@wix/stores";
 import { currentCart } from "@wix/ecom";
+import { members } from "@wix/members";
 import Cookies from "js-cookie";
 import { ReactNode } from "react";
 import { createContext } from "react";
@@ -14,13 +15,14 @@ const myWixClient = createClient({
     products,
     collections,
     currentCart,
+    members,
     // services,
   },
   auth: OAuthStrategy({
     clientId: process.env.NEXT_PUBLIC_WIX_CLIENT_ID!,
     tokens: {
       refreshToken,
-      accessToken: { value: "", expiresAt: 0 },
+      accessToken,
     },
   }),
 });

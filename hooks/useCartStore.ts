@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import { currentCart } from "@wix/ecom";
-import { WixClient } from '@/context/wixContext';
+import { WixClient } from '@/context/wixContextClient';
 type CartState = {
     cart: currentCart.Cart;
     isLoading: boolean;
