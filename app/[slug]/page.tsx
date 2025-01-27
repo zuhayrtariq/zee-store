@@ -43,7 +43,9 @@ const SinglePage = async ({
           <div className="flex justify-center items-center w-full">
             <span className=" w-[75px] rounded-full border-gray-300 mb-2 border-2  text-center md:hidden"></span>
           </div>
-          <h2 className="text-lg md:text-2xl font-semibold ">{product.name}</h2>
+          <h2 className="text-lg md:text-2xl font-semibold ">
+            {product?.name}
+          </h2>
           <p className="text-xs">{product.slug}</p>
           <hr className="hidden md:block" />
         </div>
