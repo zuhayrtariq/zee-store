@@ -17,7 +17,7 @@ const UserProfileDropdown = ({ user }: { user: any }) => {
 
   const login = async () => {
     const loginRequestData = wixClient.auth.generateOAuthData(
-      process.env.NEXT_CALLBACK_URL || "http://localhost:3000"
+      process.env.VERCEL_URL || "http://localhost:3000"
     );
     localStorage.setItem("oAuthRedirectData", JSON.stringify(loginRequestData));
     const { authUrl } = await wixClient.auth.getAuthUrl(loginRequestData);
